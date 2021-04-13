@@ -132,7 +132,7 @@ accurately scaled Orbital Period:
 
 Orbital Period = sqrt(Orbital Radius^3)
 
-Planet | Actual Period (Earth years) | Or Radius) | Or Period 
+Planet | Actual Period (Earth years) | Or Radius | Or Period |
 ------------ | ------------- | ------------ | ------------- 
 Mercury | 0.241 | 0.333 | 0.192161487
 Venus | 0.615 | 0.667 | 0.544739353
@@ -143,3 +143,23 @@ Saturn | 29.5 | 2.003 | 2.834793472
 Uranus | 84 | 2.337 | 3.572630229
 Neptune | 165 | 2.671 | 4.365267198
 Pluto | 248 | 3.005 | 5.209148215
+
+
+
+For the rotation, I simply divided the actual rotation time values (Earth days) by 1000 for values that are 
+usable with openGL. 
+
+Planet | Rotation (Earth days)  | Final Rotation
+------------ | ------------- | ------------
+Mercury | 58.6 | 0.0586
+Venus | 243 | 0.243
+Earth | 1 | 0.001
+Mars | 1.03 | 0.00103
+Jupiter | 0.41 | 0.00041
+Saturn | 0.45 | 0.00045
+Uranus | 0.72 | 0.00072
+Neptune | 0.67 | 0.00067
+Pluto | 6.39 | 0.00639
+
+As a result of these calculations, the raw values aren’t lifelike, but they are scaled correctly from planet 
+to planet. 
